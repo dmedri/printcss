@@ -5,7 +5,7 @@ Helpful tools and tips to support web printing
 
 Header code:
 
-```
+```html
 <link href="style.css" media="screen" rel="stylesheet" />                                                                                       
 <link href="print.css" media="print" rel="stylesheet" />
 ```
@@ -14,7 +14,7 @@ Header code:
 
 In functions.php:
 
-```
+```php
 <?php                                                                                                                                                     
 
 function theme_enqueue_styles() {
