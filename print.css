@@ -1,0 +1,96 @@
+/*
+ * print.css
+ * Daniele Medri, 2023
+ */
+
+@media print {
+	body {
+		background: #fff none !important;
+		color: #000;
+		font-size: 10pt;
+		margin: 0;
+	}
+
+	header,
+	nav,
+	aside {
+		display: none !important;
+	}
+	
+	#sidebar {
+		display: none;
+	}
+
+	#header {
+		height: 75px;
+	}
+	
+	#content {
+		margin-left: 0;
+		float: none;
+		width: auto;
+	}
+	
+	#footer {
+		display: none;
+	}
+
+
+	blockquote, table, pre {
+		break-inside: avoid;
+	}
+	
+	ul, ol, dl {
+		page-break-before: avoid;
+	}
+	
+	h1, h2 {
+		page-break-before: always;
+	}
+	
+	h1 + h2 {
+		page-break-before: avoid;
+	}
+	
+	img {
+		page-break-inside: avoid;
+		page-break-after: avoid;
+	}
+
+	@page {
+		margin-left: 20mm;
+		margin-right: 20mm;
+		margin-top: 40mm;
+		margin-bottom: 40mm;
+	}
+	
+        @page:right{ 
+                @bottom-left {
+                        margin: 10pt 0 30pt 0; 
+                        border-top: .25pt solid #666;
+                        content: "©  " attr(data-date) " All Rights Reserved.";
+                        font-size: 9pt;
+                        color: #333;
+                }  
+
+                @bottom-right {  
+                        margin: 10pt 0 30pt 0; 
+                        border-top: .25pt solid #666;
+                        content: counter(page);
+                        font-size: 9pt;
+                }  
+
+                @top-right {
+                        content:  string(doctitle);
+                        margin: 30pt 0 10pt 0; 
+                        font-size: 9pt;
+                        color: #333;
+                }  
+        }  
+	
+	a[href]:after {
+		content: " (" attr(href) ")";
+		font-size: 90%;
+		color: #333;
+	}
+}
