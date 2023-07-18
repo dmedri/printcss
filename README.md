@@ -6,8 +6,8 @@ Helpful tools and tips to support web printing
 Header code:
 
 ```html
-<link href="style.css" media="screen" rel="stylesheet" />                                                                                       
-<link href="print.css" media="print" rel="stylesheet" />
+<link href="style.css" media="screen" rel="stylesheet"/>
+<link href="print.css" media="print" rel="stylesheet"/>
 ```
 
 ## Wordpress tips
@@ -16,7 +16,6 @@ In functions.php:
 
 ```php
 <?php                                                                                                                                                     
-
 function theme_enqueue_styles() {
     global $wp_version;
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' ); 
@@ -24,7 +23,6 @@ function theme_enqueue_styles() {
     wp_enqueue_style( 'child-style-print', get_stylesheet_directory_uri() . '/print.css', array(), $wp_version, 'print' ); 
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' , 100);
-
 ?>
 ```
 
