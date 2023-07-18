@@ -3,6 +3,14 @@ Helpful tools and tips to support web printing
 
 ## Introduction
 
+Publishing content intended for on-screen reference often overlooks
+the presence of style sheets suitable for printing. It often happens
+on the web or in themes intended for the main applications in use (e.g. wordpress).
+
+To have a personal memory and to be able to offer a contribution or
+a simple reference to those who want to change the state of the art, 
+I collect here some useful examples.
+
 Header code:
 
 ```html
