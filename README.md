@@ -5,16 +5,16 @@ Helpful tools and tips to support web printing
 
 Header code:
 
-'''
+```
 <link href="style.css" media="screen" rel="stylesheet" />                                                                                       
 <link href="print.css" media="print" rel="stylesheet" />
-'''
+```
 
 ## Wordpress tips
 
 In functions.php:
 
-'''
+```
 <?php                                                                                                                                                     
 
 function theme_enqueue_styles() {
@@ -26,8 +26,7 @@ function theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' , 100);
 
 ?>
-
-'''
+```
 
 ## Bibliography
 
